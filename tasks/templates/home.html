@@ -1,0 +1,42 @@
+{% extends 'base.html' %}
+
+
+
+{% block content %}
+
+<main class="container py-5">
+
+    <section class="card card-body">
+        
+
+        {% if user.is_authenticated %}
+        <h1 class="display-1 text-center">Welcome {{ user }}</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ullam dolores magni sint. Numquam, in dignissimos laudantium, ipsa repellat doloremque sequi commodi nobis ducimus nostrum voluptates facilis eaque dolor provident fugiat. Illo asperiores, commodi id recusandae, rerum officiis reprehenderit temporibus suscipit dolores adipisci veniam excepturi labore earum maxime non dicta voluptatem, fugiat delectus voluptas exercitationem eligendi iusto blanditiis sequi debitis. Velit, totam. Provident, tempore! Animi assumenda, earum minima facilis consequuntur, distinctio corporis odit, maxime necessitatibus ipsa impedit vero modi illum nulla quas expedita ut accusamus ex in quae. Facilis hic obcaecati, inventore laborum cum expedita corrupti ad aperiam optio nisi?</p>
+        
+        
+        
+        {% else %}
+        <h1 class="display-1 text-center">Django App</h1>
+
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi ullam dolores magni sint. Numquam, in dignissimos laudantium, ipsa repellat doloremque sequi commodi nobis ducimus nostrum voluptates facilis eaque dolor provident fugiat. Illo asperiores, commodi id recusandae, rerum officiis reprehenderit temporibus suscipit dolores adipisci veniam excepturi labore earum maxime non dicta voluptatem, fugiat delectus voluptas exercitationem eligendi iusto blanditiis sequi debitis. Velit, totam. Provident, tempore! Animi assumenda, earum minima facilis consequuntur, distinctio corporis odit, maxime necessitatibus ipsa impedit vero modi illum nulla quas expedita ut accusamus ex in quae. Facilis hic obcaecati, inventore laborum cum expedita corrupti ad aperiam optio nisi?</p>
+        
+        <div class="text-center">
+            
+            <a class="btn btn-primary" href="/signin">
+                Signin
+            </a>
+            <a class="btn btn-warning" href="/signup">
+                Signup
+            </a>
+        </div>
+        
+        {% endif %}
+    
+        
+        
+    </section>
+
+</main>
+
+{% endblock %}
